@@ -20,7 +20,7 @@ Dirichlet distribution, as described by
 `Rudge et al. (2013) <https://doi.org/10.1016/j.gca.2013.03.042>`_
 
 At the moment the library is only compatible with melt compositions generated using
-`pyMelt <https://www.github.com/simonwmatthews/pyMelt>`.
+`pyMelt <https://www.github.com/simonwmatthews/pyMelt>`_.
 
 Installation
 ^^^^^^^^^^^^
