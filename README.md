@@ -6,7 +6,7 @@
 
 A python module for modelling partial melt aggregation using the Dirichlet distribution, as described by Rudge et al. (2013).
 
-## Documentation
+## Documentation
 
 Complete documentation is provided at [dirichletmagmamix.readthedocs.io](https://dirichletmagmamix.readthedocs.io)
 
