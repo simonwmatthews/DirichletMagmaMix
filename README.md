@@ -1,6 +1,6 @@
 # DirichletMagmaMix
 
-[![Documentation Status](https://readthedocs.org/projects/dirichletmagmamix/badge/?version=latest)](https://dirichletmagmamix.readthedocs.io/en/latest/?badge=latest) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/simonwmatthews/DirichletMagmaMix/HEAD?labpath=tutorials%2Ftutorial1.ipynb) [![DOI](https://zenodo.org/badge/402828732.svg)](https://zenodo.org/badge/latestdoi/402828732) [![flake8](https://github.com/simonwmatthews/DirichletMagmaMix/actions/workflows/flake8.yml/badge.svg)](https://github.com/simonwmatthews/DirichletMagmaMix/actions/workflows/flake8.yml)
+[![Documentation Status](https://readthedocs.org/projects/dirichletmagmamix/badge/?version=latest)](https://dirichletmagmamix.readthedocs.io/en/latest/?badge=latest) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/simonwmatthews/DirichletMagmaMix/HEAD?labpath=tutorials%2Ftutorial1.ipynb) [![DOI](https://zenodo.org/badge/402828732.svg)](https://zenodo.org/badge/latestdoi/402828732) [![flake8](https://github.com/simonwmatthews/DirichletMagmaMix/actions/workflows/flake8.yml/badge.svg)](https://github.com/simonwmatthews/DirichletMagmaMix/actions/workflows/flake8.yml) [![PyPI version](https://badge.fury.io/py/DirichletMagmaMix.svg)](https://badge.fury.io/py/DirichletMagmaMix)
 
 ## Introduction
 
