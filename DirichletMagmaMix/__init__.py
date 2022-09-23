@@ -217,7 +217,7 @@ class UnmixedMelts:
         return MixedMelts(mixed)
 
     def gen_cmc_melts(self, samples, max_crystallisation, mixing_min, mixing_max,
-                      partition_coefficient = None):
+                      partition_coefficient=None):
         """
         Generate melts produced by concurrent mixing and crystallisation, using the
         model defined in Rudge et. al. (2003).
@@ -267,7 +267,6 @@ class UnmixedMelts:
                 mix = (r * self.melts).sum()
                 mix = self._mix_isotopes(mix, r[:, 0])
 
-
             for el in mix.index:
                 if el not in self.isotope_names and el not in self.lithology_names:
                     if partition_coefficient is None:
@@ -297,7 +296,6 @@ class UnmixedMelts:
         melts_to_homog = self.melts[self.pressure > pressure]
         weights_to_homog = (self.weights[self.pressure > pressure]
                             * self.mass[self.pressure > pressure])
-
 
         weights_to_homog_normed = weights_to_homog / weights_to_homog.sum()
         weights_to_homog_normed = np.tile(np.array(weights_to_homog_normed),
@@ -332,11 +330,10 @@ class UnmixedMelts:
         for el in meanComps.index:
             if el not in self.isotope_names:
                 variances[el] = (np.sum(self.weights * self.mass
-                                        * (self.melts[el] - meanComps[el]) **2)
+                                        * (self.melts[el] - meanComps[el]) ** 2)
                                  / mixing_parameter)
 
         return pd.Series(variances)
-
 
     def correlation(self):
         """
@@ -362,10 +359,9 @@ class UnmixedMelts:
 
         for i, el1 in zip(range(np.shape(elements)[0]), elements):
             for j, el2 in zip(range(np.shape(elements)[0]), elements):
-                cors[i,j] = covs.iloc[i,j] / np.sqrt(var.iloc[i] * var.iloc[j])
+                cors[i, j] = covs.iloc[i, j] / np.sqrt(var.iloc[i] * var.iloc[j])
 
         return pd.DataFrame(cors, index=elements, columns=elements)
-
 
     def _calculate_triangular_weighting(self, shape_top=None, shape_bottom=None, **kwargs):
         """
@@ -398,7 +394,7 @@ class UnmixedMelts:
         else:
             _warn("Triangular weighting is being applied without pressure information. "
                   "Assuming equal pressure decrements.")
-            w = np.linspace(1,0,np.shape(self.melts)[0])
+            w = np.linspace(1, 0, np.shape(self.melts)[0])
 
         if shape_top is not None:
             top_mask = self.pressure < shape_top
