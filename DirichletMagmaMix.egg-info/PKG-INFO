@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: DirichletMagmaMix
+Version: 1.0
+Summary: A python library for modelling partial melt aggregation
+Home-page: https://github.com/simonwmatthews/DirichletMagmaMix
+Author: Simon Matthews
+Author-email: simonm@hi.is
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DirichletMagmaMix
+A python module for modelling partial melt aggregation using the Dirichlet distribution, as described by Rudge et al. (2013).
+
+See documentation within the module for more information. A user guide will provided soon.
+
+Cite the code:
+
+[![DOI](https://zenodo.org/badge/402828732.svg)](https://zenodo.org/badge/latestdoi/402828732)

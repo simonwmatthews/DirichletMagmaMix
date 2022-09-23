@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+DirichletMagmaMix/__init__.py
+DirichletMagmaMix.egg-info/PKG-INFO
+DirichletMagmaMix.egg-info/SOURCES.txt
+DirichletMagmaMix.egg-info/dependency_links.txt
+DirichletMagmaMix.egg-info/requires.txt
+DirichletMagmaMix.egg-info/top_level.txt

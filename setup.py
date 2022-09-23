@@ -16,6 +16,7 @@ setuptools.setup(
     install_requires=[
             'pandas>=1.3.5',
             'numpy>=1.21.5',
+            'pyMelt>=2.0'
             ],
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -18,6 +18,7 @@ __author__ = "Simon Matthews"
 
 import numpy as np
 import pandas as pd
+import pyMelt as m
 from copy import copy
 from warnings import warn as _warn
 
@@ -304,6 +305,9 @@ class UnmixedMelts:
 
         homogenised = (weights_to_homog_normed * melts_to_homog).sum()
 
+        homogenised = self._mix_isotopes(homogenised, weights_to_homog_normed[:, 0],
+                                         melts_to_homog)
+
         for index, row in self.melts.iterrows():
             if self.pressure.loc[index] > pressure:
                 for col in self.melts.columns:
@@ -417,7 +421,7 @@ class UnmixedMelts:
 
         return pd.Series(w)
 
-    def _mix_isotopes(self, mixed, proportions=None):
+    def _mix_isotopes(self, mixed, proportions=None, unmixed=None):
         """
         Calculates the mixed isotope ratios.
 
@@ -428,6 +432,8 @@ class UnmixedMelts:
         proportions : numpy.Array or None, default: None
             The proportions of each melt in the mixture. If None, the melts will be
             homogenised.
+        unmixed : pandas.Series or None
+            Use a subset of melts to do the mixing. If None the whole suite of melts will be used.
 
         Returns
         -------
@@ -444,9 +450,16 @@ class UnmixedMelts:
             else:
                 if proportions is None:
                     proportions = self.weights * self.mass / np.sum(self.weights * self.mass)
-                mixed[iso['ratio']] = np.sum(proportions
-                                             * self.melts[iso['element']] / mixed[iso['element']]
-                                             * self.melts[iso['ratio']])
+                if unmixed is None:
+                    mixed[iso['ratio']] = np.sum(proportions
+                                                 * self.melts[iso['element']]
+                                                 / mixed[iso['element']]
+                                                 * self.melts[iso['ratio']])
+                else:
+                    mixed[iso['ratio']] = np.sum(proportions
+                                                 * unmixed[iso['element']]
+                                                 / mixed[iso['element']]
+                                                 * unmixed[iso['ratio']])
 
         return mixed
 
