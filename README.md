@@ -22,7 +22,12 @@ The library may be used in the cloud on myBinder, and is probably the best way o
 ## Citing the code
 
 A manuscript will be coming soon. In the meantime, please cite the latest version of the repository on zenodo:
+
 [![DOI](https://zenodo.org/badge/402828732.svg)](https://zenodo.org/badge/latestdoi/402828732)
+
+The model itself should be cited as:
+
+[Rudge, J. F., Maclennan, J., & Stracke, A. (2013). The geochemical consequences of mixing melts from a heterogeneous mantle. Geochimica et Cosmochimica Acta, 114, 112-143.](https://doi.org/10.1016/j.gca.2013.03.042)
 
 ## Support
 
