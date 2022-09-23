@@ -12,7 +12,9 @@ Complete documentation is provided at [dirichletmagmamix.readthedocs.io](https:/
 
 ## Installation
 
-DirichletMagmaMix is available on pip, and can be installed using the terminal command `pip install DirichletMagmaMix`.
+DirichletMagmaMix is available on pip, and can be installed using the terminal command:
+
+`pip install DirichletMagmaMix`.
 
 ## Run DirichletMagmaMix in the cloud
 
