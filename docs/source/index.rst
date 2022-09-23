@@ -29,7 +29,7 @@ you can run in the cloud using myBinder:
 
 Installation
 ^^^^^^^^^^^^
-It will be possible to install DirichletMagmaMix via pip soon:
+It is possible to install DirichletMagmaMix via pip:
 
 .. code-block:: python
 
