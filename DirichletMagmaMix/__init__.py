@@ -513,7 +513,8 @@ def import_pyMelt_geoSetting(geoSetting, weights=None, isotopes={}, **kwargs):
         dX = np.zeros(np.shape(lith.F)[0])
         dX[1:] = np.array(lith.F.iloc[1:]) - np.array(lith.F[:-1])
         dX = pd.Series(dX)
-        mass = mass.append(dX * geoSetting.mantle.proportions[lithology_name],
+        prop_index = geoSetting.mantle.names.index(lithology_name)
+        mass = mass.append(dX * geoSetting.mantle.proportions[prop_index],
                            ignore_index=True)
 
         if lithology_name in isotopes:
